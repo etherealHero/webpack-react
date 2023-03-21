@@ -19,3 +19,7 @@ https://babeljs.io/docs/babel-polyfill
 npm install --save @babel/polyfill
 need for entry: \*.jsx support
 npm i --save react react-dom
+
+#redux
+https://www.youtube.com/playlist?list=PL6DxKON1uLOHTgN679Es1vkCS911i9HJX
+4 3\29

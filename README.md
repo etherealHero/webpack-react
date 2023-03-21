@@ -30,6 +30,8 @@ npm i -D babel-loader @babel/core @babel/preset-react @babel/preset-env
 npm i @babel/polyfill react react-dom
 ```
 
-#redux
-https://www.youtube.com/playlist?list=PL6DxKON1uLOHTgN679Es1vkCS911i9HJX
-4 3\29
+## typescript
+
+```
+npm i -D typescript ts-loader @types/react @types/react-dom
+```

@@ -4,14 +4,14 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
    mode: "development",
-   entry: ["@babel/polyfill", "./src/index.jsx"],
+   entry: ["@babel/polyfill", "./src/index.tsx"],
    output: {
       path: path.resolve(__dirname, "dist"),
       filename: "[name].[hash].js",
       clean: true,
    },
    resolve: {
-      extensions: [".js", ".jsx"],
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
    },
    devServer: {
       port: 3000,
@@ -65,6 +65,11 @@ module.exports = {
                   presets: ["@babel/preset-react", "@babel/preset-env"],
                },
             },
+         },
+         {
+            test: /\.tsx?$/,
+            use: "ts-loader",
+            exclude: /node_modules/,
          },
       ],
    },

@@ -10,6 +10,13 @@ module.exports = {
     filename: "[name].[hash].js",
     clean: true,
   },
+  devServer: {
+    port: 3000,
+    static: {
+      directory: "./src",
+      watch: true,
+    },
+  },
   plugins: [
     new HTMLWebpackPlugin({ template: "./src/index.html" }),
     new CleanWebpackPlugin(),
@@ -31,6 +38,10 @@ module.exports = {
           },
           "sass-loader",
         ],
+      },
+      {
+        test: /\.(jpg|jpeg|png|svg|gif)$/,
+        use: ["file-loader"],
       },
     ],
   },
